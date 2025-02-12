@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Lato&family=Quicksand&display=swap" rel="stylesheet">
+    <title>Happy Birthday, Byan!</title>
+</head>
+<body>
+    <audio id="backgroundAudio" autoplay loop>
+        <source src="audio/Happy Birthday (Piano Version) - Helmut Schenker.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+<button onclick="document.getElementById('backgroundAudio').play()">Play Audio</button>
+<button onclick="document.getElementById('backgroundAudio').pause()">Pause Audio</button>
+<div class="particle" style="left: 10%; top: 20%;"></div>
+<div class="particle" style="left: 40%; top: 40%;"></div>
+<div class="particle" style="left: 60%; top: 60%;"></div>
+<div class="particle" style="left: 80%; top: 80%;"></div>
+<div class="balloon balloon1">
+    <img src="Images/Balon.png" alt="Balloon" width="100" height="100">
+</div>
+<div class="balloon balloon2">
+    <img src="Images/Balon.png" alt="Balloon" width="100" height="100">
+</div>
+<div class="balloon balloon3">
+    <img src="Images/Balon.png" alt="Balloon" width="100" height="100">
+</div>
+<div class="balloon balloon4">
+    <img src="Images/Balon.png" alt="Balloon" width="100" height="100">
+</div>
+<div class="balloon balloon5">
+    <img src="Images/Balon.png" alt="Balloon" width="100" height="100">
+</div>
+    <script>
+        document.getElementById('audio').volume = 0.5; // Mengatur volume 50%
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script>
+        function makeConfetti() {
+            var confettiAnimation = setInterval(function() {
+                confetti({
+                    particleCount: 7,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 }
+                });
+                confetti({
+                    particleCount: 7,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 }
+                });
+                if (Date.now() > animationEnd) {
+                    clearInterval(confettiAnimation);
+                }
+            }, 250);
+        }
+        makeConfetti();
+    </script>
+     <div style="display: flex; justify-content: cent er; gap: 10px;">
+        <img src="Images/Kue.png" alt="Birthday Cake" style="width: 150px; display: block; margin: 20px auto;">
+    </div>
+    <header>
+        <h1>Happiest Birthday, Byan; teman 3 bulanku!</h1>
+    </header> 
+    <section id="home">
+        <h2>Dear, the Son of February</h2>
+        <div class="photo-row">
+            <img src="Images/sal.jpg" alt="Foto Salman 1" style="width: 150px;">
+            <img src="Images/salll.jpg" alt="Foto Salman 2" style="width: 150px;">
+        </div>
+        <p>(Untuk segala baik rupa dunia yang aku sayangi; yang senyum dan tawanya  dilimpahi puja-puji; yang hadirnya jadi pelebur sendu; selamat mengulangi hari lahir!)</p>
+    </section>
+    <section id="storyline" class="section-3d">
+        <h2>Before we dive in, let’s do a quick recap—because knowing you, you might’ve already forgotten some of this.</h2>
+    </section>
+    <section class="section-3d">
+        <div class="story-container">
+            <div class="story-row">
+                <img src="Images/wibu.jpg" alt="First Meet" class="story-img" data-src="Images/salman1.jpg">
+                <p> It felt familiar but different—like picking up an old book and realizing you still remember the story. Oh, and this was back when you still thought I was that freak.</p>
+            </div>
+    </section>
+    <section class="section-3d">
+        <div class="story-row reverse">
+            <p>This was when you started joking around, and honestly? It felt nice.</p>
+            <img src="Images/bocil .jpg" alt="First Talk" class="story-img" data-src="Images/salman2.jpg">
+        </div>
+    </section>
+    <section class="section-3d">
+        <div class="story-row">
+            <img src="Images/baik.jpg" alt="Getting Closer" class="story-img" data-src="Images/salman3.jpg">
+            <p>You didn’t have to help, but you did. And not just once. You’ve always been there, quietly supportive in a way that doesn’t ask for anything in return. I noticed, by the way. I always do.</p>
+        </div>
+    </section>
+    <section class="section-3d">
+        <div class="story-row">
+            <img src="Images/pren.jpg" alt="Getting Closer" class="story-img" data-src="Images/salman3.jpg">
+            <p>Stuck in the rain, playing Uno, being unnecessarily loud—who knew something that simple could be so fun? But did we get annoyed? Nah, we just went with it and had fun.</p>
+        </div>
+    </section>
+    <section class="section-3d">
+        <div class="story-row">
+            <img src="Images/tutor.jpg" alt="Getting Closer" class="story-img" data-src="Images/salman3.jpg">
+            <p>You were working on your project, and I was just there, keeping you company. Nothing big, nothing dramatic—just being there, I hope that matters to you.</p>
+        </div>
+    </section>
+    <section class="section">
+        <h2>A special letter for my 3-month friend—the one who’s effortlessly cool.</h2>
+        <button id="openLetterButton" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">Open Letter</button>
+<div id="letterModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <img src="Images/letter for boo.jpg" alt="surat">
+    </div>
+</div>
+    </section>
+<section id="videoDrive" class="section-3d">
+    <h2>Watch the Special Video</h2>
+    <p>And last but not least, a little amateur video just for you, Byan! Hope it makes you smile!</p>
+    <a href="https://drive.google.com/file/d/1VMbVJLKX1cVjcsodKpgIAwuKnraNLuC9/view?usp=drivesdk" target="_blank" class="drive-btn">Watch Video</a>
+  </section>
+<script>
+    const modal = document.getElementById("letterModal");
+    const openButton = document.getElementById("openLetterButton");
+    const closeButton = document.querySelector(".close-button");
+    openButton.addEventListener("click", () => {
+        modal.style.display = "block";
+    });
+    closeButton.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+    window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+</script>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          // Ambil semua elemen section yang ingin diberi efek
+          const sections = document.querySelectorAll("section");
+    
+          sections.forEach(section => {
+            section.addEventListener("click", function() {
+              // Tambahkan kelas 'pop-up' saat diklik
+              this.classList.add("pop-up");
+              
+              // Setelah 200ms (sesuai durasi transition), hapus kelas 'pop-up'
+              setTimeout(() => {
+                this.classList.remove("pop-up");
+              }, 200);
+            });
+          });
+        });
+      </script>
+    </body>
+    </html>

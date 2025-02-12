@@ -1,0 +1,252 @@
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      linear-gradient(90deg, #ccc 1px, transparent 1px),
+      linear-gradient(#ccc 1px, transparent 1px);
+    background-size: 20px 20px; /* Sesuaikan ukuran grid sesuai keinginan */
+    z-index: -1; /* Pastikan berada di belakang semua konten */
+    pointer-events: none; /* Agar tidak mengganggu interaksi */
+  }
+body {
+    font-family: 'Lato', sans-serif;
+    color: #2c3e50;
+    background-color: #4e5a83;
+    margin: 0;
+    padding: 0;
+}
+@keyframes particleAnimation {
+    0% { transform: translate(0, 0); opacity: 1; }
+    100% { transform: translate(100px, -100px); opacity: 0; }
+}
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    animation: particleAnimation 3s infinite;
+}
+
+.particle:nth-child(odd) { animation-duration: 4s; }
+.particle:nth-child(even) { animation-duration: 5s; }
+header {
+    background-color: #4e5a83;
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem;
+    background: linear-gradient(45deg, #203146, #FFD700);
+    text-align: center;
+    color: #ffffff;
+    text-align: center;
+}
+header:hover {
+    background: linear-gradient(45deg, #FFD700, #202c50); /* Gradasi berubah */
+    transform: scale(1.05); /* Sedikit membesar */
+}
+
+/* Hover efek teks */
+header h1 {
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+header h1:hover {
+    color: #fcf4ce; /* Teks berubah jadi emas */
+    text-decoration: underline; /* Garis bawah saat hover */
+}
+section {
+    background-color: #2f3752;
+    color: #fff4d6;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    .photo-row {
+        display: flex; 
+        justify-content: center; 
+        gap: 20px;
+        margin-top: 20px; 
+    }
+
+    .photo-row img {
+        border-radius: 10px; /* Sudut gambar agak melengkung */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+        transition: transform 0.3s ease; /* Animasi efek hover */
+    }
+    
+    .photo-row img:hover {
+        transform: scale(1.5); /* Perbesar saat dihover */
+    }
+    .modal {
+        display: none; /* Awalnya modal disembunyikan */
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.8); /* Warna hitam transparan */
+    }
+    
+    /* Modal Konten */
+    .modal-content {
+        background-color: #FFF4D6; /* Background surat */
+        margin: 15% auto; /* Pusatkan modal */
+        padding: 20px;
+        border: 2px solid #FFD700; /* Border emas */
+        border-radius: 10px;
+        width: 80%;
+        max-width: 800px; /* Ukuran modal maksimal */
+        color: #2C3E50; /* Teks */
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    
+    }
+    
+    /* Gambar dalam Modal */
+    .modal-image {
+        width: 100%; /* Lebar gambar mengikuti lebar modal */
+        max-width: 750px; /* Ukuran maksimal gambar */
+        height: auto; /* Menjaga rasio gambar tetap */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        margin-top: 20px;
+    }
+    
+    /* Tombol Close */
+    .close-button {
+        color: #FFD700; /* Warna tombol */
+        float: right;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+    
+    .close-button:hover {
+        color: #FF5733; /* Warna berubah saat di-hover */
+    }
+}
+body {
+    position: relative;
+    height: 100vh;
+    background-color: #fef7e1;
+    overflow-y: auto; /* Mengizinkan scroll vertikal */
+}
+
+.balloon {
+    position: absolute;
+    bottom: -150px; /* Awal balon di luar layar */
+    animation: float 10s linear infinite;
+}
+
+.balloon img {
+    width: 100px; /* Ukuran balon */
+}
+
+.balloon1 { left: 10%; animation-delay: 0s; }
+.balloon2 { left: 30%; animation-delay: 2s; }
+.balloon3 { left: 50%; animation-delay: 4s; }
+.balloon4 { left: 70%; animation-delay: 6s; }
+.balloon5 { left: 90%; animation-delay: 8s; }
+
+@keyframes float {
+    0% {
+        transform: translateY(0); /* Balon mulai dari bawah */
+    }
+    100% {
+        transform: translateY(-120vh); /* Balon keluar di atas layar */
+    }
+}
+#storyline {
+    text-align: center;
+    padding: 20px;
+    background-color: #2f3752;
+    color: #fff4d6;
+   
+}
+.story-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    
+}
+.story-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.story-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.story-img {
+    width: 100%;
+    max-width: 200px; /* Ukuran tetap */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.story-img:hover {
+    transform: scale(1.1); /* Perbesar sedikit saat hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan */
+}
+
+.story-row p {
+    max-width: 250px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .story-row {
+        flex-direction: column;
+    }
+}
+.section-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+  }
+  .section-3d:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+  }
+  .section-3d:active {
+    transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
+  }
+ /* Styling untuk Section Video Drive */
+#videoDrive {
+    padding: 20px;
+    background-color: #2f3752;
+    color: #fff4d6;
+    text-align: center;
+    border-radius: 20px;
+    margin: 20px;
+  }
+  
+  /* Styling untuk tombol navigasi ke Drive */
+  .drive-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #203146;
+    color: #FFD700;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .drive-btn:hover {
+    background-color: #FFD700;
+    color: #203146;
+  }
+  
